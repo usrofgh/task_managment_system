@@ -21,5 +21,6 @@ from todo.views import index
 urlpatterns = [
     path("__debug__/", include("debug_toolbar.urls")),
     path("admin/", admin.site.urls),
-    path("", index)
+    path("", index),
+    path("", include("todo.urls", namespace="todo")),
 ]
