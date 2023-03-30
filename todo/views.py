@@ -63,3 +63,22 @@ class TaskTypeDeleteView(generic.DeleteView):
     template_name = "todo/task_type_confirm_delete.html"
     context_object_name = "task_type_confirm_delete"
     success_url = reverse_lazy("catalog:task-type-list")
+
+
+class WorkerListView(generic.ListView):
+    model = Worker
+
+
+class WorkerDetailView(generic.DetailView):
+    model = Worker
+
+
+class WorkerUpdateView(generic.UpdateView):
+    model = Worker
+    fields = "__all__"
+    success_url = reverse_lazy("catalog:worker-list")
+
+
+class WorkerDeleteView(generic.DeleteView):
+    model = Worker
+    success_url = reverse_lazy("catalog:worker-list")

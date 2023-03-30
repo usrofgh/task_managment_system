@@ -8,6 +8,11 @@ from todo.views import (
     TaskTypeDetailView,
     TaskTypeUpdateView,
     TaskTypeDeleteView,
+
+    WorkerListView,
+    WorkerDetailView,
+    WorkerUpdateView,
+    WorkerDeleteView,
 )
 from django.urls import path
 
@@ -21,6 +26,12 @@ urlpatterns = [
     path("task-types/<int:pk>/", TaskTypeDetailView.as_view(), name="task-type-detail"),
     path("task-types/<int:pk>/edit/", TaskTypeUpdateView.as_view(), name="task-type-edit"),
     path("task-types/<int:pk>/delete/", TaskTypeDeleteView.as_view(), name="task-type-delete"),
+
+    path("workers/", WorkerListView.as_view(), name="worker-list"),
+    path("workers/<int:pk>/", WorkerDetailView.as_view(), name="worker-detail"),
+    path("workers/<int:pk>/edit/", WorkerUpdateView.as_view(), name="worker-edit"),
+    path("workers/<int:pk>/delete/", WorkerDeleteView.as_view(), name="worker-delete"),
+
 ]
 
 app_name = "todo"
