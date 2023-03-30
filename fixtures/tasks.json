@@ -1,0 +1,15 @@
+[
+  {
+    "model": "catalog.task",
+    "pk": 1,
+    "fields": {
+      "name": "Fix authorisation",
+      "description": "People can't authorise into site",
+      "deadline": "2023-04-01 10:00:00",
+      "is_completed": false,
+      "priority": "H",
+      "task_type": 1,
+      "assignees": [1, 2]
+    }
+  }
+]

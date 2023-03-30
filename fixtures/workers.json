@@ -1,0 +1,110 @@
+[
+  {
+    "model": "catalog.worker",
+    "pk": 1,
+    "fields": {
+      "position": 1,
+      "username": "k.smith",
+      "email": "k.smith@example.com",
+      "password": "fjdskfoaw123",
+      "first_name": "Karen",
+      "last_name": "Smith"
+    }
+  },
+  {
+    "model": "catalog.worker",
+    "pk": 2,
+    "fields": {
+      "position": 1,
+      "username": "j.doe",
+      "email": "j.doe@example.com",
+      "password": "kjdkfjfjsd!23",
+      "first_name": "John",
+      "last_name": "Doe"
+    }
+  },
+  {
+    "model": "catalog.worker",
+    "pk": 3,
+    "fields": {
+      "position": 2,
+      "username": "p.johnson",
+      "email": "p.johnson@example.com",
+      "password": "ldk1js9f2!a",
+      "first_name": "Peter",
+      "last_name": "Johnson"
+    }
+  },
+  {
+    "model": "catalog.worker",
+    "pk": 4,
+    "fields": {
+      "position": 2,
+      "username": "s.williams",
+      "email": "s.williams@example.com",
+      "password": "jf02nlv#$l",
+      "first_name": "Sarah",
+      "last_name": "Williams"
+    }
+  },
+  {
+    "model": "catalog.worker",
+    "pk": 5,
+    "fields": {
+      "position": 3,
+      "username": "m.garcia",
+      "email": "m.garcia@example.com",
+      "password": "pwip13nL1)",
+      "first_name": "Maria",
+      "last_name": "Garcia"
+    }
+  },
+  {
+    "model": "catalog.worker",
+    "pk": 6,
+    "fields": {
+      "position": 3,
+      "username": "r.lee",
+      "email": "r.lee@example.com",
+      "password": "v!jfdslkd23",
+      "first_name": "Robert",
+      "last_name": "Lee"
+    }
+  },
+  {
+    "model": "catalog.worker",
+    "pk": 7,
+    "fields": {
+      "position": 4,
+      "username": "l.thomas",
+      "email": "l.thomas@example.com",
+      "password": "wefcl12jK",
+      "first_name": "Laura",
+      "last_name": "Thomas"
+    }
+  },
+  {
+    "model": "catalog.worker",
+    "pk": 8,
+    "fields": {
+      "position": 5,
+      "username": "d.hernandez",
+      "email": "d.hernandez@example.com",
+      "password": "jskc9n01d!",
+      "first_name": "David",
+      "last_name": "Hernandez"
+    }
+  },
+  {
+    "model": "catalog.worker",
+    "pk": 9,
+    "fields": {
+      "position": 1,
+      "username": "s.lee",
+      "email": "s.lee@example.com",
+      "password": "fjds!flk231",
+      "first_name": "Samantha",
+      "last_name": "Lee"
+    }
+  }
+]

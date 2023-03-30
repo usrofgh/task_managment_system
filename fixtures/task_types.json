@@ -1,0 +1,37 @@
+[
+  {
+    "model": "catalog.tasktype",
+    "pk": 1,
+    "fields": {
+      "name": "Bug"
+    }
+  },
+  {
+    "model": "catalog.tasktype",
+    "pk": 2,
+    "fields": {
+      "name": "New feature"
+    }
+  },
+  {
+    "model": "catalog.tasktype",
+    "pk": 3,
+    "fields": {
+      "name": "Breaking change"
+    }
+  },
+  {
+    "model": "catalog.tasktype",
+    "pk": 4,
+    "fields": {
+      "name": "Refactoring"
+    }
+  },
+  {
+    "model": "catalog.tasktype",
+    "pk": 5,
+    "fields": {
+      "name": "QA"
+    }
+  }
+]
