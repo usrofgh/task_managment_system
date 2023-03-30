@@ -77,6 +77,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = "task_manager_system.wsgi.application"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 
 # Database
