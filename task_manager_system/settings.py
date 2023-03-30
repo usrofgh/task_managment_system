@@ -18,6 +18,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 INTERNAL_IPS = [
     "127.0.0.1",
 ]
+LOGIN_REDIRECT_URL = "/"
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
@@ -121,7 +122,7 @@ TIME_ZONE = "UTC"
 
 USE_I18N = True
 
-USE_TZ = True
+USE_TZ = False  
 
 
 # Static files (CSS, JavaScript, Images)
@@ -136,3 +137,4 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+ASSETS_ROOT = '/static/assets'

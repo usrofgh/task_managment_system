@@ -1,3 +1,5 @@
+from django.urls import path
+
 from todo.views import (
     PositionListView,
     PositionDetailView,
@@ -20,7 +22,6 @@ from todo.views import (
     TaskDeleteView,
     TaskCreateView,
 )
-from django.urls import path
 
 urlpatterns = [
     path("positions/", PositionListView.as_view(), name="position-list"),

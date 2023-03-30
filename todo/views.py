@@ -31,12 +31,12 @@ class PositionDetailView(LoginRequiredMixin, generic.DetailView):
 
 class PositionUpdateView(LoginRequiredMixin, generic.UpdateView):
     model = Position
-    success_url = reverse_lazy("catalog:position-list")
+    success_url = reverse_lazy("todo:position-list")
 
 
 class PositionDeleteView(LoginRequiredMixin, generic.DeleteView):
     model = Position
-    success_url = reverse_lazy("catalog:position-list")
+    success_url = reverse_lazy("todo:position-list")
 
 
 class TaskTypeListView(LoginRequiredMixin, generic.ListView):
@@ -55,14 +55,14 @@ class TaskTypeUpdateView(LoginRequiredMixin, generic.UpdateView):
     manage = TaskType
     template_name = "todo/task_type_form.html"
     context_object_name = "task_type_form"
-    success_url = reverse_lazy("catalog:task-type-list")
+    success_url = reverse_lazy("todo:task-type-list")
 
 
 class TaskTypeDeleteView(LoginRequiredMixin, generic.DeleteView):
     manage = TaskType
     template_name = "todo/task_type_confirm_delete.html"
     context_object_name = "task_type_confirm_delete"
-    success_url = reverse_lazy("catalog:task-type-list")
+    success_url = reverse_lazy("todo:task-type-list")
 
 
 class WorkerListView(LoginRequiredMixin, generic.ListView):
@@ -76,12 +76,12 @@ class WorkerDetailView(LoginRequiredMixin, generic.DetailView):
 class WorkerUpdateView(LoginRequiredMixin, generic.UpdateView):
     model = Worker
     fields = "__all__"
-    success_url = reverse_lazy("catalog:worker-list")
+    success_url = reverse_lazy("todo:worker-list")
 
 
 class WorkerDeleteView(LoginRequiredMixin, generic.DeleteView):
     model = Worker
-    success_url = reverse_lazy("catalog:worker-list")
+    success_url = reverse_lazy("todo:worker-list")
 
 
 class TaskListView(LoginRequiredMixin, generic.ListView):
@@ -95,15 +95,15 @@ class TaskDetailView(LoginRequiredMixin, generic.DetailView):
 class TaskUpdateView(LoginRequiredMixin, generic.UpdateView):
     model = Task
     fields = "__all__"
-    success_url = reverse_lazy("catalog:task-list")
+    success_url = reverse_lazy("todo:task-list")
 
 
 class TaskCreateView(LoginRequiredMixin, generic.CreateView):
     model = Task
     fields = "__all__"
-    success_url = reverse_lazy("catalog:task-list")
+    success_url = reverse_lazy("todo:task-list")
 
 
 class TaskDeleteView(LoginRequiredMixin, generic.DeleteView):
     model = Task
-    success_url = reverse_lazy("catalog:task-list")
+    success_url = reverse_lazy("todo:task-list")

@@ -22,7 +22,7 @@
             <ul class="list-group">
             {% for task in task_list %}
               {% if task.completing_step == 0 %}
-                <a href="{% url 'catalog:task-detail' pk=task.id %}" class="text-decoration-none">
+                <a href="{% url 'todo:task-detail' pk=task.id %}" class="text-decoration-none">
                 <li class="list-group-item hif">
                     <h6 class="mb-0">
                       {{ task }}
@@ -54,7 +54,7 @@
             <ul class="list-group">
             {% for task in task_list %}
               {% if task.completing_step == 1 %}
-                <a href="{% url 'catalog:task-detail' pk=task.id %}" class="text-decoration-none">
+                <a href="{% url 'todo:task-detail' pk=task.id %}" class="text-decoration-none">
                 <li class="list-group-item hif">
                     <h6 class="mb-0">
                       {{ task }}
@@ -86,7 +86,7 @@
             <ul class="list-group">
             {% for task in task_list %}
               {% if task.completing_step == 2 %}
-                <a href="{% url 'catalog:task-detail' pk=task.id %}" class="text-decoration-none">
+                <a href="{% url 'todo:task-detail' pk=task.id %}" class="text-decoration-none">
                 <li class="list-group-item hif">
                     <h6 class="mb-0">
                       {{ task }}
