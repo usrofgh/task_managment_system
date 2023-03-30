@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views import generic
 
-from todo.models import Worker, Task, Position
+from todo.models import Worker, Task, Position, TaskType
 
 
 def index(request):
@@ -37,3 +37,29 @@ class PositionUpdateView(generic.UpdateView):
 class PositionDeleteView(generic.DeleteView):
     model = Position
     success_url = reverse_lazy("catalog:position-list")
+
+
+class TaskTypeListView(generic.ListView):
+    model = TaskType
+    template_name = "todo/task_type_list.html"
+    context_object_name = "task_type_list"
+
+
+class TaskTypeDetailView(generic.DetailView):
+    model = TaskType
+    template_name = "todo/task_type_detail.html"
+    context_object_name = "task_type_detail"
+
+
+class TaskTypeUpdateView(generic.UpdateView):
+    manage = TaskType
+    template_name = "todo/task_type_form.html"
+    context_object_name = "task_type_form"
+    success_url = reverse_lazy("catalog:task-type-list")
+
+
+class TaskTypeDeleteView(generic.DeleteView):
+    manage = TaskType
+    template_name = "todo/task_type_confirm_delete.html"
+    context_object_name = "task_type_confirm_delete"
+    success_url = reverse_lazy("catalog:task-type-list")
