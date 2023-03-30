@@ -82,3 +82,28 @@ class WorkerUpdateView(generic.UpdateView):
 class WorkerDeleteView(generic.DeleteView):
     model = Worker
     success_url = reverse_lazy("catalog:worker-list")
+
+
+class TaskListView(LoginRequiredMixin, generic.ListView):
+    model = Task
+
+
+class TaskDetailView(generic.DetailView):
+    model = Task
+
+
+class TaskUpdateView(generic.UpdateView):
+    model = Task
+    fields = "__all__"
+    success_url = reverse_lazy("catalog:task-list")
+
+
+class TaskCreateView(generic.CreateView):
+    model = Task
+    fields = "__all__"
+    success_url = reverse_lazy("catalog:task-list")
+
+
+class TaskDeleteView(generic.DeleteView):
+    model = Task
+    success_url = reverse_lazy("catalog:task-list")

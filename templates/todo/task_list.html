@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="eu">
+<head>
+  {% load static %}
+  <link rel="stylesheet" href="{%  static 'css/styles.css' %}">
+
+  <title>Task Manager</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row flex-nowrap">
+        <div class="todo_content">
+        <div class="col-md-2 todo_item">
+        <div class="card">
+          <div class="card-header bg-primary text-white">
+            <h5 class="card-title text-center">To Do</h5>
+          </div>
+          <div class="card-body">
+            <ul class="list-group">
+            {% for task in task_list %}
+              {% if task.completing_step == 0 %}
+                <a href="{% url 'catalog:task-detail' pk=task.id %}" class="text-decoration-none">
+                <li class="list-group-item hif">
+                    <h6 class="mb-0">
+                      {{ task }}
+                      <span>
+                        {{ task.get_priority_display }}
+                      </span>
+                    </h6>
+                  <span class="mb-0 deadline_size">{{ task.deadline}}</span>
+                  <p class="deadline_size position_color p_position_c">{{ task.task_type }}
+                  </p>
+              </li>
+               </a>
+              {% endif %}
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div class="col-md-2 todo_item">
+        <div class="card">
+          <div class="card-header bg-warning text-white">
+            <h5 class="card-title text-center">Doing</h5>
+          </div>
+          <div class="card-body">
+            <ul class="list-group">
+            {% for task in task_list %}
+              {% if task.completing_step == 1 %}
+                <a href="{% url 'catalog:task-detail' pk=task.id %}" class="text-decoration-none">
+                <li class="list-group-item hif">
+                    <h6 class="mb-0">
+                      {{ task }}
+                      <span>
+                        {{ task.get_priority_display }}
+                      </span>
+                    </h6>
+                  <span class="mb-0 deadline_size">{{ task.deadline}}</span>
+                  <br>
+                  <p class="deadline_size position_color p_position_c">{{ task.task_type }}</p>
+              </li>
+               </a>
+              {% endif %}
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div class="col-md-2 todo_item">
+        <div class="card">
+          <div class="card-header bg-success text-white">
+            <h5 class="card-title text-center">Done</h5>
+          </div>
+          <div class="card-body">
+            <ul class="list-group">
+            {% for task in task_list %}
+              {% if task.completing_step == 2 %}
+                <a href="{% url 'catalog:task-detail' pk=task.id %}" class="text-decoration-none">
+                <li class="list-group-item hif">
+                    <h6 class="mb-0">
+                      {{ task }}
+                      <span>
+                        {{ task.get_priority_display }}
+                      </span>
+                    </h6>
+                  <span class="mb-0 deadline_size">{{ task.deadline}}</span>
+                  <p class="deadline_size position_color p_position_c">{{ task.task_type }}</p>
+              </li>
+               </a>
+              {% endif %}
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</body>
+</html>
