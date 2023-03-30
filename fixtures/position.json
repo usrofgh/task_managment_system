@@ -1,34 +1,34 @@
 [
   {
-    "model": "catalog.position",
+    "model": "todo.position",
     "pk": 1,
     "fields": {
       "name": "Developer"
     }
   },
   {
-    "model": "catalog.position",
+    "model": "todo.position",
     "pk": 2,
     "fields": {
       "name": "QA"
     }
   },
   {
-    "model": "catalog.position",
+    "model": "todo.position",
     "pk": 3,
     "fields": {
       "name": "Designer"
     }
   },
   {
-    "model": "catalog.position",
+    "model": "todo.position",
     "pk": 4,
     "fields": {
       "name": "DevOps"
     }
   },
   {
-    "model": "catalog.position",
+    "model": "todo.position",
     "pk": 5,
     "fields": {
       "name": "Project Manager"
