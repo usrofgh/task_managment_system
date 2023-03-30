@@ -6,10 +6,586 @@
       "name": "Fix authorisation",
       "description": "People can't authorise into site",
       "deadline": "2023-04-01 10:00:00",
-      "is_completed": false,
+      "completing_step": 0,
       "priority": "H",
       "task_type": 1,
-      "assignees": [1, 2]
+      "assignees": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "todo.task",
+    "pk": 2,
+    "fields": {
+      "name": "Create database",
+      "description": "We need to manage data",
+      "deadline": "2023-07-01 07:00:00",
+      "completing_step": 1,
+      "priority": "M",
+      "task_type": 3,
+      "assignees": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "model": "todo.task",
+    "pk": 3,
+    "fields": {
+      "name": "Delete databases",
+      "description": "We need many unnecessary DBs. Delete them.",
+      "deadline": "2023-11-02 10:00:00",
+      "completing_step": 2,
+      "priority": "L",
+      "task_type": 2,
+      "assignees": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "todo.task",
+    "pk": 4,
+    "fields": {
+      "name": "Create a site",
+      "description": "Site for our company",
+      "deadline": "2024-05-01 10:00:00",
+      "completing_step": 0,
+      "priority": "H",
+      "task_type": 3,
+      "assignees": [
+        3,
+        1
+      ]
+    }
+  },
+  {
+    "model": "todo.task",
+    "pk": 5,
+    "fields": {
+      "name": "Buy groceries",
+      "description": "We're running low on food",
+      "deadline": "2023-04-02 15:00:00",
+      "completing_step": 0,
+      "priority": "L",
+      "task_type": 2,
+      "assignees": [
+        2,
+        5
+      ]
+    }
+  },
+  {
+    "model": "todo.task",
+    "pk": 6,
+    "fields": {
+      "name": "Prepare for presentation",
+      "description": "We have a big meeting coming up",
+      "deadline": "2023-04-06 10:00:00",
+      "completing_step": 2,
+      "priority": "H",
+      "task_type": 1,
+      "assignees": [
+        1,
+        3,
+        5
+      ]
+    }
+  },
+  {
+    "model": "todo.task",
+    "pk": 7,
+    "fields": {
+      "name": "Call customer support",
+      "description": "We have a problem with our software",
+      "deadline": "2023-04-08 14:00:00",
+      "completing_step": 1,
+      "priority": "M",
+      "task_type": 3,
+      "assignees": [
+        2,
+        4
+      ]
+    }
+  },
+  {
+    "model": "todo.task",
+    "pk": 8,
+    "fields": {
+      "name": "Write blog post",
+      "description": "We need to promote our company",
+      "deadline": "2023-04-15 12:00:00",
+      "completing_step": 0,
+      "priority": "L",
+      "task_type": 1,
+      "assignees": [
+        1,
+        3,
+        5
+      ]
+    }
+  },
+  {
+    "model": "todo.task",
+    "pk": 9,
+    "fields": {
+      "name": "Organize team event",
+      "description": "We want to boost morale",
+      "deadline": "2023-04-20 17:00:00",
+      "completing_step": 2,
+      "priority": "H",
+      "task_type": 2,
+      "assignees": [
+        2,
+        4
+      ]
+    }
+  },
+  {
+    "model": "todo.task",
+    "pk": 10,
+    "fields": {
+      "name": "Fix website issue",
+      "description": "We're losing customers",
+      "deadline": "2023-04-25 09:00:00",
+      "completing_step": 1,
+      "priority": "M",
+      "task_type": 3,
+      "assignees": [
+        1,
+        3,
+        5
+      ]
+    }
+  },
+  {
+    "model": "todo.task",
+    "pk": 11,
+    "fields": {
+      "name": "Interview candidates",
+      "description": "We need to hire a new employee",
+      "deadline": "2023-04-30 11:00:00",
+      "completing_step": 0,
+      "priority": "L",
+      "task_type": 1,
+      "assignees": [
+        2,
+        4
+      ]
+    }
+  },
+  {
+    "model": "todo.task",
+    "pk": 12,
+    "fields": {
+      "name": "Prepare presentation for sales pitch",
+      "description": "Create a compelling pitch to win over potential clients",
+      "deadline": "2023-05-10 15:00:00",
+      "completing_step": 1,
+      "priority": "H",
+      "task_type": 3,
+      "assignees": [
+        1,
+        4
+      ]
+    }
+  },
+  {
+    "model": "todo.task",
+    "pk": 13,
+    "fields": {
+      "name": "Order office supplies",
+      "description": "Ensure that we have enough stationary and printer toner",
+      "deadline": "2023-04-25 12:00:00",
+      "completing_step": 0,
+      "priority": "M",
+      "task_type": 1,
+      "assignees": [
+        2,
+        5
+      ]
+    }
+  },
+  {
+    "model": "todo.task",
+    "pk": 14,
+    "fields": {
+      "name": "Prepare payroll for the month",
+      "description": "Calculate salaries and bonuses for all employees",
+      "deadline": "2023-04-30 17:00:00",
+      "completing_step": 2,
+      "priority": "L",
+      "task_type": 5,
+      "assignees": [
+        1,
+        3,
+        5
+      ]
+    }
+  },
+  {
+    "model": "todo.task",
+    "pk": 15,
+    "fields": {
+      "name": "Organize team building event",
+      "description": "Plan and execute a fun team outing for morale boosting",
+      "deadline": "2023-05-20 10:00:00",
+      "completing_step": 1,
+      "priority": "M",
+      "task_type": 4,
+      "assignees": [
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "model": "todo.task",
+    "pk": 16,
+    "fields": {
+      "name": "Develop new feature for the app",
+      "description": "Design and code a new feature for the company's mobile app",
+      "deadline": "2023-05-15 14:00:00",
+      "completing_step": 0,
+      "priority": "L",
+      "task_type": 2,
+      "assignees": [
+        2,
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "model": "todo.task",
+    "pk": 17,
+    "fields": {
+      "name": "Respond to customer complaints",
+      "description": "Investigate and respond to customer complaints received via email",
+      "deadline": "2023-04-28 16:00:00",
+      "completing_step": 2,
+      "priority": "M",
+      "task_type": 1,
+      "assignees": [
+        1,
+        3
+      ]
+    }
+  },
+  {
+    "model": "todo.task",
+    "pk": 18,
+    "fields": {
+      "name": "Prepare agenda for meeting",
+      "description": "Create a detailed agenda for the upcoming team meeting.",
+      "deadline": "2023-04-15 14:00:00",
+      "completing_step": 1,
+      "priority": "M",
+      "task_type": 2,
+      "assignees": [
+        1,
+        3
+      ]
+    }
+  },
+  {
+    "model": "todo.task",
+    "pk": 19,
+    "fields": {
+      "name": "Follow up on project status",
+      "description": "Check in with team members on the progress of our ongoing project.",
+      "deadline": "2023-04-25 10:00:00",
+      "completing_step": 2,
+      "priority": "H",
+      "task_type": 3,
+      "assignees": [
+        2,
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "model": "todo.task",
+    "pk": 20,
+    "fields": {
+      "name": "Organize team outing",
+      "description": "Plan a fun team outing to boost morale.",
+      "deadline": "2023-05-05 15:00:00",
+      "completing_step": 0,
+      "priority": "L",
+      "task_type": 4,
+      "assignees": [
+        1,
+        5
+      ]
+    }
+  },
+  {
+    "model": "todo.task",
+    "pk": 21,
+    "fields": {
+      "name": "Review budget for next quarter",
+      "description": "Analyze expenses from the previous quarter and prepare a budget for the next quarter.",
+      "deadline": "2023-04-20 12:00:00",
+      "completing_step": 1,
+      "priority": "M",
+      "task_type": 5,
+      "assignees": [
+        3,
+        4
+      ]
+    }
+  },
+  {
+    "model": "todo.task",
+    "pk": 22,
+    "fields": {
+      "name": "Research new software options",
+      "description": "Explore potential new software options to improve our workflow.",
+      "deadline": "2023-04-30 17:00:00",
+      "completing_step": 0,
+      "priority": "H",
+      "task_type": 1,
+      "assignees": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "todo.task",
+    "pk": 23,
+    "fields": {
+      "name": "Plan team-building exercises",
+      "description": "Brainstorm and plan team-building exercises for the upcoming quarter.",
+      "deadline": "2023-05-10 14:00:00",
+      "completing_step": 2,
+      "priority": "L",
+      "task_type": 4,
+      "assignees": [
+        1,
+        3,
+        5
+      ]
+    }
+  },
+  {
+    "model": "todo.task",
+    "pk": 24,
+    "fields": {
+      "name": "Interview candidates",
+      "description": "We need to hire a new employee",
+      "deadline": "2023-04-30 11:00:00",
+      "completing_step": 0,
+      "priority": "L",
+      "task_type": 1,
+      "assignees": [
+        2,
+        4
+      ]
+    }
+  },
+  {
+    "model": "todo.task",
+    "pk": 25,
+    "fields": {
+      "name": "Order office supplies",
+      "description": "We are running low on paper and pens",
+      "deadline": "2023-05-05 14:00:00",
+      "completing_step": 1,
+      "priority": "M",
+      "task_type": 2,
+      "assignees": [
+        1,
+        5
+      ]
+    }
+  },
+  {
+    "model": "todo.task",
+    "pk": 26,
+    "fields": {
+      "name": "Prepare presentation",
+      "description": "We have a meeting with investors next week",
+      "deadline": "2023-05-10 10:00:00",
+      "completing_step": 1,
+      "priority": "H",
+      "task_type": 3,
+      "assignees": [
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "model": "todo.task",
+    "pk": 27,
+    "fields": {
+      "name": "Test new product",
+      "description": "We need to ensure the product is functional before launch",
+      "deadline": "2023-05-20 16:00:00",
+      "completing_step": 2,
+      "priority": "L",
+      "task_type": 4,
+      "assignees": [
+        3,
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "model": "todo.task",
+    "pk": 28,
+    "fields": {
+      "name": "Update website content",
+      "description": "The website needs fresh content to improve SEO",
+      "deadline": "2023-05-25 12:00:00",
+      "completing_step": 2,
+      "priority": "M",
+      "task_type": 5,
+      "assignees": [
+        1,
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "model": "todo.task",
+    "pk": 29,
+    "fields": {
+      "name": "Create social media strategy",
+      "description": "We need a plan to increase our social media presence",
+      "deadline": "2023-06-01 10:00:00",
+      "completing_step": 0,
+      "priority": "H",
+      "task_type": 1,
+      "assignees": [
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "model": "todo.task",
+    "pk": 30,
+    "fields": {
+      "name": "Organize company event",
+      "description": "We want to host a charity event for the local community",
+      "deadline": "2023-06-15 15:00:00",
+      "completing_step": 1,
+      "priority": "L",
+      "task_type": 2,
+      "assignees": [
+        1,
+        3,
+        5
+      ]
+    }
+  },
+  {
+    "model": "todo.task",
+    "pk": 31,
+    "fields": {
+      "name": "Submit expense report",
+      "description": "Submit expense report for the business trip",
+      "deadline": "2023-05-15 18:00:00",
+      "completing_step": 1,
+      "priority": "M",
+      "task_type": 2,
+      "assignees": [
+        1,
+        3
+      ]
+    }
+  },
+  {
+    "model": "todo.task",
+    "pk": 32,
+    "fields": {
+      "name": "Review project proposal",
+      "description": "Review the project proposal submitted by the team",
+      "deadline": "2023-05-01 11:00:00",
+      "completing_step": 2,
+      "priority": "H",
+      "task_type": 3,
+      "assignees": [
+        2,
+        5
+      ]
+    }
+  },
+  {
+    "model": "todo.task",
+    "pk": 33,
+    "fields": {
+      "name": "Organize team building activity",
+      "description": "Plan and organize a team building activity for the team",
+      "deadline": "2023-06-01 15:00:00",
+      "completing_step": 0,
+      "priority": "L",
+      "task_type": 4,
+      "assignees": [
+        1,
+        4,
+        5
+      ]
+    }
+  },
+  {
+    "model": "todo.task",
+    "pk": 34,
+    "fields": {
+      "name": "Update website content",
+      "description": "Update the website content to reflect the latest changes",
+      "deadline": "2023-05-10 09:00:00",
+      "completing_step": 1,
+      "priority": "M",
+      "task_type": 1,
+      "assignees": [
+        2,
+        4
+      ]
+    }
+  },
+  {
+    "model": "todo.task",
+    "pk": 35,
+    "fields": {
+      "name": "Create new marketing campaign",
+      "description": "Create a new marketing campaign for the new product launch",
+      "deadline": "2023-04-25 12:00:00",
+      "completing_step": 0,
+      "priority": "H",
+      "task_type": 5,
+      "assignees": [
+        1,
+        3,
+        5
+      ]
+    }
+  },
+  {
+    "model": "todo.task",
+    "pk": 36,
+    "fields": {
+      "name": "Research new vendors",
+      "description": "Research and shortlist new vendors for the company",
+      "deadline": "2023-05-31 16:00:00",
+      "completing_step": 2,
+      "priority": "L",
+      "task_type": 2,
+      "assignees": [
+        2,
+        4
+      ]
     }
   }
 ]
