@@ -1,4 +1,6 @@
 {% extends "base-fullscreen.html" %}
+{% load crispy_forms_filters %}
+{% load crispy_forms_tags %}
 
 {% block title %} Sign IN {% endblock %}
 
@@ -35,12 +37,13 @@
               <form role="form" method="post" action="" class="text-start">
 
                 {% csrf_token %}
-                <div class="input-group input-group-outline mb-3">
-                    {{ form.username }}
-                </div>
-                <div class="input-group input-group-outline mb-3">
-                  {{ form.password }}
-                </div>
+                {{ form|crispy }}
+{#                <div class="input-group input-group-outline mb-3">#}
+{#                    {{ form.username }}#}
+{#                </div>#}
+{#                <div class="input-group input-group-outline mb-3">#}
+{#                  {{ form.password }}#}
+{#                </div>#}
                 <div class="form-check form-switch d-flex align-items-center mb-3">
                   <input class="form-check-input" type="checkbox" id="rememberMe">
                   <label class="form-check-label mb-0 ms-2" for="rememberMe">Remember me</label>
