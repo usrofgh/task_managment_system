@@ -18,7 +18,7 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 
-from todo.views import index
+from todo.views import index, toggle_join_task
 
 urlpatterns = [
     path("__debug__/", include("debug_toolbar.urls")),
@@ -26,4 +26,5 @@ urlpatterns = [
     path("accounts/", include("django.contrib.auth.urls")),
     path("", index),
     path("", include("todo.urls", namespace="todo")),
+    path("tasks/<int:pk>/toggle-join-task/", toggle_join_task, name="toggle-join-task")
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
