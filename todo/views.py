@@ -1,4 +1,7 @@
+from django.contrib.auth import get_user_model
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views import generic
@@ -107,3 +110,17 @@ class TaskCreateView(LoginRequiredMixin, generic.CreateView):
 class TaskDeleteView(LoginRequiredMixin, generic.DeleteView):
     model = Task
     success_url = reverse_lazy("todo:task-list")
+
+
+@login_required
+def toggle_join_task(request, pk):
+    me = get_user_model().objects.get(id=request.user.id)
+    current_task = Task.objects.get(id=pk)
+    if (
+        me in current_task.assignees.all()
+    ):
+        current_task.assignees.remove(me)
+    else:
+        current_task.assignees.add(me)
+
+    return HttpResponseRedirect(reverse_lazy("todo:task-list"))
