@@ -88,7 +88,12 @@
         <div class="card d-flex blur justify-content-center shadow-lg my-sm-0 my-sm-8 mt-8 mb-5">
           <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent">
             <div class="bg-gradient-primary shadow-primary border-radius-lg p-3">
-              <h3 class="text-white text-primary mb-0">Detail Info</h3>
+              <h3 class="text-white text-primary mb-0">Detail Info
+               <a href="{% url 'todo:task-edit' pk=task.id %}"
+                     class="btn btn-outline-light" style="">
+                    Edit
+                  </a>
+              </h3>
             </div>
           </div>
           <div class="card-body">
@@ -113,6 +118,8 @@
                   No members
                 {% endfor %}
               </p>
+
+
               <p>
                 {% if user not in task.assignees.all %}
                   {% csrf_token %}
@@ -126,7 +133,10 @@
                     Leave
                   </a>
                 {% endif %}
+
               </p>
+
+
             </div>
           </div>
         </div>
