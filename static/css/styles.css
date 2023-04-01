@@ -1,0 +1,12 @@
+/* NAVIGATION */
+
+.navbar {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 12px 0px;
+}
+.blur {
+    box-shadow: rgba(20, 22, 23, 0.82) 0px 0px 2px inset;
+    background-color: rgba(19, 21, 22, 0.8) !important;
+}
+.shadow {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px !important;
+}

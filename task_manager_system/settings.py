@@ -129,6 +129,8 @@ USE_TZ = False
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
+
+ROOT_DIR = "/"
 STATIC_URL = "static/"
 STATICFILES_DIRS = [
     BASE_DIR / "static",
