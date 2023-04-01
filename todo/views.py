@@ -2,7 +2,7 @@ from django.contrib.auth import get_user_model
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponseRedirect
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views import generic
 
@@ -139,8 +139,4 @@ def toggle_join_task(request, pk):
         current_task.assignees.remove(me)
     else:
         current_task.assignees.add(me)
-
-    request_from_page = request.META.get("HTTP_REFERER").rsplit("/")[-2]
-    if request_from_page == "tasks":
-        return HttpResponseRedirect(reverse_lazy("todo:task-list"))
-    return HttpResponseRedirect(reverse_lazy("todo:task-detail", args=[pk]))
+    return redirect(request.META.get("HTTP_REFERER"))
