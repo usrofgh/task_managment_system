@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  <title>Delete position</title>
+{% endblock %}
+
+{% block card-title %}
+  <h3 class="text-white text-primary mb-0">
+    Delete {{ position }}
+  </h3>
+{% endblock %}
+
+{% block card-content %}
+      <p><strong>Are you sure?</strong></p>
+      <p><strong>You'll lose all employees with this position too</strong></p>
+      <form action="" method="post">
+        {% csrf_token %}
+        <input type="submit" value="Yes" class="btn btn-outline-danger">
+        <a href="{% url 'todo:position-detail' pk=position.id %}" class="btn btn-outline-success">Back</a>
+      </form>
+{% endblock %}

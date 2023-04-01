@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  <title>Delete Task type</title>
+{% endblock %}
+
+{% block card-title %}
+  <h3 class="text-white text-primary mb-0">
+    Delete {{ task_type_confirm_delete }}
+  </h3>
+{% endblock %}
+
+{% block card-content %}
+      <p><strong>Are you sure?</strong></p>
+      <p><strong>You'll lose all tasks with this task type too</strong></p>
+      <form action="" method="post">
+        {% csrf_token %}
+        <input type="submit" value="Yes" class="btn btn-outline-danger">
+        <a href="{% url 'todo:task-type-detail' pk=task_type_confirm_delete.id %}" class="btn btn-outline-success">Back</a>
+      </form>
+{% endblock %}

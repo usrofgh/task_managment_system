@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  <title>Delete Employee</title>
+{% endblock %}
+
+{% block card-title %}
+  <h3 class="text-white text-primary mb-0">
+    Delete {{ worker }}
+  </h3>
+{% endblock %}
+
+{% block card-content %}
+      <p><strong>Are you sure?</strong></p>
+      <form action="" method="post">
+        {% csrf_token %}
+        <input type="submit" value="Yes" class="btn btn-outline-danger">
+        <a href="{% url 'todo:worker-detail' pk=worker.id %}" class="btn btn-outline-success">Back</a>
+      </form>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  <title>Task Type Detail</title>
+{% endblock %}
+
+{% block card-title %}
+  <h3 class="text-white text-primary mb-0">
+    Task Type Detail
+  </h3>
+{% endblock %}
+
+{% block card-content %}
+  <p><strong>Type:</strong> {{ task_type_detail }}</p>
+  <p><strong>Count such tasks:</strong> {{ task_type_detail.tasks.count }}</p>
+  <p>
+    <strong>Tasks:</strong>
+    {% for task in task_type_detail.tasks.all %}
+      <a href="{% url 'todo:task-detail' pk=task.id %}">
+        {{ task }}{{ task.get_priority_display }},
+      </a>
+    {% endfor %}
+  </p>
+  <a href="{% url 'todo:task-type-delete' pk=task_type_detail.id%}" class="btn btn-outline-danger color text-danger">Delete</a>
+  <a href="{% url 'todo:task-type-edit' pk=task_type_detail.id %}" class="btn btn-outline-success">Edit</a>
+    <a href="{% url 'todo:task-type-list' %}" class="btn btn-outline-success">Back</a>
+{% endblock %}
+
+
+
