@@ -40,16 +40,17 @@ class Task(models.Model):
     )
 
     TASK_PROGRESS = (
-        (0, "ToDo"),
-        (1, "Doing"),
-        (2, "Done")
+        ("0", "To Do"),
+        ("1", "Doing"),
+        ("2", "Done")
     )
 
     name = models.CharField(max_length=255)
     description = models.TextField()
     deadline = models.DateTimeField()
-    completing_step = models.IntegerField(choices=TASK_PROGRESS)
+    completing_step = models.CharField(max_length=1, choices=TASK_PROGRESS)
     priority = models.CharField(max_length=1, choices=PRIORITIES)
+    # created_by = models.OneToOneField(to=Worker, on_delete=models.CASCADE, related_name=)
 
     task_type = models.ForeignKey(to=TaskType, on_delete=models.CASCADE)
     assignees = models.ManyToManyField(to=Worker)
