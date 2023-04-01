@@ -1,7 +1,6 @@
 from django.contrib.auth import get_user_model
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views import generic
@@ -35,6 +34,7 @@ class PositionDetailView(LoginRequiredMixin, generic.DetailView):
 
 class PositionUpdateView(LoginRequiredMixin, generic.UpdateView):
     model = Position
+    fields = "__all__"
     success_url = reverse_lazy("todo:position-list")
 
 
@@ -57,8 +57,10 @@ class TaskTypeDetailView(LoginRequiredMixin, generic.DetailView):
 
 class TaskTypeUpdateView(LoginRequiredMixin, generic.UpdateView):
     manage = TaskType
+    fields = "__all__"
     template_name = "todo/task_type_form.html"
     context_object_name = "task_type_form"
+    queryset = TaskType.objects.all()
     success_url = reverse_lazy("todo:task-type-list")
 
 
@@ -66,6 +68,7 @@ class TaskTypeDeleteView(LoginRequiredMixin, generic.DeleteView):
     manage = TaskType
     template_name = "todo/task_type_confirm_delete.html"
     context_object_name = "task_type_confirm_delete"
+    queryset = TaskType.objects.all()
     success_url = reverse_lazy("todo:task-type-list")
 
 
@@ -79,17 +82,13 @@ class WorkerDetailView(LoginRequiredMixin, generic.DetailView):
 
 class WorkerUpdateView(LoginRequiredMixin, generic.UpdateView):
     model = Worker
-    fields = "__all__"
+    fields = ("first_name", "last_name", "username", "email", "position")
     success_url = reverse_lazy("todo:worker-list")
 
 
 class WorkerDeleteView(LoginRequiredMixin, generic.DeleteView):
     model = Worker
     success_url = reverse_lazy("todo:worker-list")
-
-
-# class TaskListView(LoginRequiredMixin, generic.ListView):
-#     model = Task
 
 
 class TaskListView(LoginRequiredMixin, generic.ListView):
