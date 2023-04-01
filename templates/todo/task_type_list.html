@@ -99,6 +99,7 @@
                 <thead>
                 <tr>
                   <th scope="col">Name</th>
+                  <th scope="col">Count tasks</th>
                 </tr>
                 </thead>
 
@@ -107,6 +108,7 @@
                   <tr onclick="window.location='{% url 'todo:task-type-detail' pk=task_type.id %}'"
                       class="clickable-row">
                     <td>{{ task_type }}</td>
+                    <td>{{ task_type.tasks.count }}</td>
                   </tr>
                 {% endfor %}
                 </tbody>
