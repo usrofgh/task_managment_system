@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  <title>Employee detail</title>
+{% endblock %}
+
+{% block card-title %}
+  <h3 class="text-white text-primary mb-0">
+    Employee detail
+  </h3>
+{% endblock %}
+
+{% block card-content %}
+  <p><strong>Full Name:</strong> {{ worker.first_name }} {{ worker.last_name }}</p>
+  <p><strong>Position:</strong> {{ worker.position }}</p>
+  <p><strong>Email:</strong> {{ worker.email }}</p>
+  <p><strong>Task Count:</strong> {{ worker.tasks.count }}</p>
+  <p>
+    <strong>Tasks:</strong>
+    {% for task in worker.tasks.all %}
+      <a href="{% url 'todo:task-detail' pk=task.id %}">
+        {{ task }}{{ task.get_priority_display }},
+      </a>
+    {% empty %}
+      No found tasks
+    {% endfor %}
+  </p>
+  {% if user.id == worker.id %}
+    <a href="{% url 'todo:worker-delete' pk=worker.id %}" class="btn btn-outline-danger color text-danger">Delete</a>
+    <a href="{% url 'todo:worker-edit' pk=worker.id %}" class="btn btn-outline-success">Edit</a>
+  {% endif %}
+  <a href="{% url 'todo:worker-list' %}" class="btn btn-outline-success">Cancel</a>
+{% endblock %}

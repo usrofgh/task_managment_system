@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  <title>Worker list</title>
+{% endblock %}
+
+{% block card-title %}
+  <h3 class="text-white text-primary mb-0">
+    Worker list
+  </h3>
+{% endblock %}
+
+{% block card-content %}
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Username</th>
+      <th scope="col">Position</th>
+      <th scope="col">Email</th>
+      <th scope="col">Task count</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    {% for worker in worker_list %}
+      <tr onclick="window.location='{% url 'todo:worker-detail' pk=worker.id %}'" class="clickable-row">
+        <td>{{ worker.first_name }}</td>
+        <td>{{ worker.last_name }}</td>
+        <td>{{ worker.username }}</td>
+        <td>{{ worker.position }}</td>
+        <td>{{ worker.email }}</td>
+        <td>{{ worker.tasks.count }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
