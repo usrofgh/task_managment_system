@@ -15,22 +15,16 @@ Clone repository
 ```shell
 git clone https://github.com/usrofgh/task_managment_system
 cd task_managment_system/
-python -m venv venv
-source venv/Scripts/activate
-pip install -r -requirements.txt
-python manager.py migrate
-python manage.py loaddata fixtures/*.json
-python manage.py runserver
 ```
-Script above clone repository, move there, create python venv and activate it.
+Script above clone repository, move there
 
-After install all requirements, activate all migrations and load data for project
-
+```
+shell ./build.sh
+```
+create python venv and activate it
+After install all requirements, activate all migrations and load data for project.
 After run server
 
-Go to http://127.0.0.1:8000
-
-Credential data for login
 ```
 User: admin
 Password: fert3443F#$GT$%G3
