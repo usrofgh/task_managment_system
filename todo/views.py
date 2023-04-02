@@ -9,6 +9,7 @@ from todo.forms import TaskSearchForm
 from todo.models import Worker, Task, Position, TaskType
 
 
+@login_required
 def index(request):
     worker_count = Worker.objects.count()
     to_do_count = Task.objects.filter(completing_step=0).count()
