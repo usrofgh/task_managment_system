@@ -46,7 +46,7 @@ What's all the bells and whistles this project can perform?
 
 
 ## Demo
-![ad task.png](demo%20screenshots%2Fad%20task.png)
-![img_1.png](demo%20screenshots%2Fimg_1.png)
-![img.png](img.png)
-![img_1.png](img_1.png)
+![home.png](demo%20screenshots%2Fhome.png)
+![add_task.png](demo%20screenshots%2Fadd_task.png)
+![task_detail.png](demo%20screenshots%2Ftask_detail.png)
+![task_list.png](demo%20screenshots%2Ftask_list.png)
