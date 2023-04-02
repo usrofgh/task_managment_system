@@ -6,7 +6,7 @@ Simple task manager project which will help you organize your tasks in developin
 This project uses django, django-orm, bootstrap5
 
 ### Check it out!
-[Deploy on server](http://127.0.0.1:8000)
+[Task manager project deployed to Render](https://task-manager-system.onrender.com/)
 
 ## Installation
 Python3 must be already installed
