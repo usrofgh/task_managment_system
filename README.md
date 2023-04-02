@@ -33,7 +33,7 @@ Go to http://127.0.0.1:8000
 Credential data for login
 ```
 User: admin
-Password: admin
+Password: fert3443F#$GT$%G3
 ```
 
 
