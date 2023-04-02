@@ -106,5 +106,17 @@
       "first_name": "Samantha",
       "last_name": "Lee"
     }
+  },
+  {
+    "model": "todo.worker",
+    "pk": 10,
+    "fields": {
+      "position": 1,
+      "username": "admin",
+      "email": "admin@gmail.com",
+      "password": "pbkdf2_sha256$390000$L1hI1JjeuFpnIfwqJlcW92$npt/tvc1GA/o2wAW2+iHnHMj63bug4WitweTd4PCr4U=",
+      "first_name": "Admin",
+      "last_name": "Admin"
+    }
   }
 ]
