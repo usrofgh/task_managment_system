@@ -1,5 +1,3 @@
-![Logo of the project](https://raw.githubusercontent.com/jehna/readme-best-practices/master/sample-logo.png)
-
 # Task Manager System
 
 Simple task manager project which will help you organize your tasks in developing
@@ -38,7 +36,8 @@ What's all the bells and whistles this project can perform?
 * take tasks in work and cancel
 * handy manage priority of tasks
 
-
+## Structure
+![img.png](img.png)
 ## Demo
 ![home.png](demo%20screenshots%2Fhome.png)
 ![add_task.png](demo%20screenshots%2Fadd_task.png)
