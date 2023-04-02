@@ -37,7 +37,7 @@ What's all the bells and whistles this project can perform?
 * handy manage priority of tasks
 
 ## Structure
-![img.png](img.png)
+![structure.png](demo%20screenshots%2Fstructure.png)
 ## Demo
 ![home.png](demo%20screenshots%2Fhome.png)
 ![add_task.png](demo%20screenshots%2Fadd_task.png)
