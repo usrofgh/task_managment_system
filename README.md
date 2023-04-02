@@ -19,7 +19,7 @@ cd task_managment_system/
 Script above clone repository, move there
 
 ```
-shell ./build.sh
+./build.sh
 ```
 create python venv and activate it
 After install all requirements, activate all migrations and load data for project.
