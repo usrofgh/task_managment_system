@@ -27,6 +27,7 @@ def index(request):
 
 class PositionListView(LoginRequiredMixin, generic.ListView):
     model = Position
+    queryset = Position.objects.prefetch_related("workers")
 
 
 class PositionDetailView(LoginRequiredMixin, generic.DetailView):
@@ -46,6 +47,7 @@ class PositionDeleteView(LoginRequiredMixin, generic.DeleteView):
 
 class TaskTypeListView(LoginRequiredMixin, generic.ListView):
     model = TaskType
+    queryset = TaskType.objects.prefetch_related("tasks")
     template_name = "todo/task_type_list.html"
     context_object_name = "task_type_list"
 
@@ -75,10 +77,12 @@ class TaskTypeDeleteView(LoginRequiredMixin, generic.DeleteView):
 
 class WorkerListView(LoginRequiredMixin, generic.ListView):
     model = Worker
+    queryset = Worker.objects.prefetch_related("position", "tasks")
 
 
 class WorkerDetailView(LoginRequiredMixin, generic.DetailView):
     model = Worker
+    queryset = Worker.objects.prefetch_related("tasks")
 
 
 class WorkerUpdateView(LoginRequiredMixin, generic.UpdateView):
@@ -102,7 +106,11 @@ class TaskListView(LoginRequiredMixin, generic.ListView):
         return context
 
     def get_queryset(self):
-        queryset = Task.objects.all()
+        queryset = (
+            Task.objects
+            .select_related("task_type")
+            .prefetch_related("assignees")
+        )
         form = TaskSearchForm(self.request.GET)
         if form.is_valid():
             return queryset.filter(name__icontains=form.cleaned_data["name"])
@@ -110,6 +118,7 @@ class TaskListView(LoginRequiredMixin, generic.ListView):
 
 class TaskDetailView(LoginRequiredMixin, generic.DetailView):
     model = Task
+    queryset = Task.objects.prefetch_related("assignees")
 
 
 class TaskUpdateView(LoginRequiredMixin, generic.UpdateView):
